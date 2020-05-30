@@ -1,0 +1,16 @@
+{
+  "name": "TestServer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src",
+    "build": "node scripts/build"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "archiver": "^4.0.1"
+  }
+}
