@@ -12,9 +12,10 @@ spec:
           readOnly: true
   volumes:
     - name: test-vol
-      configMap: nginx-configmap-vol
-      items:
-        - key: file-1.txt
-          path: file-a.txt
-        - key: file-2.txt
-          path: file-b.txt
+      configMap:
+        name: nginx-configmap-vol
+        items:
+          - key: file-1.txt
+            path: file-a.txt
+          - key: file-2.txt
+            path: file-b.txt
