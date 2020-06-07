@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+  labels:
+    app: nginx-app
+spec:
+  selector:
+    app: nginx-app
+  type: NodePort
+  ports:
+    - nodePort: 31111 # This is the port on the service that receives EXTERNAL requests
+      port: 80 # This is the port on the service that receives requests from within the cluster
+      targetPort: 80 # This is the port on the container to send requests to
