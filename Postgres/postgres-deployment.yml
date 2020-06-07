@@ -21,13 +21,13 @@ spec:
           envFrom:
             - configMapRef:
                 name: postgres-config
-#          volumeMounts:
-#            - mountPath: /var/lib/postgresql/data
-#              name: postgresdb
-#      volumes:
-#        - name: postgresdb
-#          persistentVolumeClaim:
-#            claimName: postgres-pv-claim
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgresdb
+      volumes:
+        - name: postgresdb
+          persistentVolumeClaim:
+            claimName: postgres-pv-claim
 ---
 apiVersion: v1
 kind: Service
