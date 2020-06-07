@@ -29,4 +29,7 @@ kubectl get configmap
 Setup the pod
 ```
 kubectl create -f redis-pod-configmap-env.yml
+kubectl exec -it redis-pod-configmap-env -- /bin/bash
+env
 ```
+The environment variables should print out
