@@ -7,9 +7,18 @@ app.get('/hello', (req, res) => {
     res.send('Hello World');
 });
 
+let counter = 0;
+
 app.get('/healthcheck', (req, res) => {
-    console.log('Healthcheck called');
-    res.send('Healthy');
+    if (counter === 10) {
+        console.log('Unhealthy Healthcheck');
+        counter = 0;
+        res.status(500).send('Unhealthy');
+    } else {
+        counter++;
+        console.log('Healthy Healthcheck');
+        res.send('Healthy');
+    }
 });
 
 app.listen(3000, () => console.log('Running'));
