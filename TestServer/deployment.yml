@@ -35,6 +35,9 @@ spec:
           volumeMounts:
             - mountPath: /usr/src/data
               name: testserver-volume
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
       volumes:
         - name: testserver-volume
           hostPath:
