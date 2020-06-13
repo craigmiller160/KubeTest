@@ -5,7 +5,7 @@ const app = express();
 
 app.get('/test', async (req, res) => {
     console.log('Test called');
-    const ajaxRes = await axios.get('http://localhost:3000/hello');
+    const ajaxRes = await axios.get('http://localhost:30001/hello');
     res.send(`Ajax Response: ${ajaxRes.data}`);
 });
 
