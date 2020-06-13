@@ -17,3 +17,6 @@ These commands get images imported
 
 docker save mynginx > myimage.tar
 microk8s ctr image import myimage.tar
+
+For mounting storage, hostpath is enough. Just combine a local directory with a container one.
+See TestServer for an example
