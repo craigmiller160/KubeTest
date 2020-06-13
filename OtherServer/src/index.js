@@ -6,7 +6,7 @@ const app = express();
 app.get('/test', async (req, res) => {
     console.log('Test called');
     try {
-        const ajaxRes = await axios.get('http://localhost:30001/hello', { timeout: 2 });
+        const ajaxRes = await axios.get('http://testserver:3000/hello', { timeout: 2 });
         res.send(`Ajax Response: ${ajaxRes.data}`);
     } catch (ex) {
         res.status(500).send(ex.message);
