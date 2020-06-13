@@ -38,6 +38,7 @@ spec:
           livenessProbe:
             httpGet:
               path: /healthcheck
+              port: 3000
       volumes:
         - name: testserver-volume
           hostPath:
