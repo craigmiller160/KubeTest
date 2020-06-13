@@ -20,3 +20,6 @@ microk8s ctr image import myimage.tar
 
 For mounting storage, hostpath is enough. Just combine a local directory with a container one.
 See TestServer for an example
+
+To restart/reload a deployment
+microk8s kubectl rollout restart deployment testserver
