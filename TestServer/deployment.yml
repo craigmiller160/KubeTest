@@ -32,3 +32,11 @@ spec:
             - containerPort: 3000
           env:
           imagePullPolicy: Never
+          volumeMounts:
+            - mountPath: /usr/src/data
+              name: testserver-volume
+      volumes:
+        - name: testserver-volume
+          hostPath:
+            path: /home/craig/testserver
+            type: Directory
