@@ -15,7 +15,7 @@ app.get('/healthcheck', (req, res) => {
         res.status(500).send('Unhealthy');
     } else {
         counter++;
-        console.log('Healthy Healthcheck');
+        console.log('Healthy Healthcheck ' + counter);
         res.send('Healthy');
     }
 });
