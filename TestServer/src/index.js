@@ -12,7 +12,6 @@ let counter = 0;
 app.get('/healthcheck', (req, res) => {
     if (counter === 10) {
         console.log('Unhealthy Healthcheck');
-        counter = 0;
         res.status(500).send('Unhealthy');
     } else {
         counter++;
