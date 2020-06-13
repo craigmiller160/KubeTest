@@ -26,8 +26,9 @@ spec:
               name: postgresdb
       volumes:
         - name: postgresdb
-          persistentVolumeClaim:
-            claimName: postgres-pv-claim
+          hostPath:
+            path: /home/craig/KubeData/postgresql
+            type: Directory
 ---
 apiVersion: v1
 kind: Service
