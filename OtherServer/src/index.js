@@ -9,6 +9,9 @@ app.get('/test', async (req, res) => {
     res.send(`Ajax Response: ${ajaxRes.data}`);
 });
 
-app.get('/healthcheck', (req, res) => res.send('Healthy'));
+app.get('/healthcheck', (req, res) => {
+    console.log('Healthcheck');
+    res.send('Healthy');
+});
 
 app.listen(3001, () => console.log('Running'));
